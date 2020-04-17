@@ -28,5 +28,39 @@ function CanWrite($magazine, $messageToWrite)
 if (CanWrite("aba", "aaa")) {
     echo "tu peux ecrire ta lettre";
 } else {
-    echo "tu ne peux ecrire ta lettre";
+    echo "tu ne peux pas ecrire ta lettre";
 }
+
+// SOLUTION MOINS OPTI
+
+// function TesterSiJePeuxEcrireAvec($magazine, $message)
+// {
+//     for ($i = 0; $i < strlen($message); $i++) {
+//         $lettreCouranteDuMessage = $message[$i];
+//         if ($lettreCouranteDuMessage == " ") {
+//             continue;
+//         }
+//         $lettrePresente = false;
+//         for ($j = 0; $j < strlen($magazine); $j++) {
+//             $lettreCouranteDuMagazine = $magazine[$j];
+//             if ($lettreCouranteDuMessage == $lettreCouranteDuMagazine) {
+//                 $lettrePresente = true;
+//                 $magazine[$j] = " ";
+//                 break;
+//             }
+//         }
+//         if ($lettrePresente == false) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// $magazine = "bonjour aujourd'hui il fait beau";
+// $lettre = "content content";
+
+// if (TesterSiJePeuxEcrireAvec($magazine, $lettre)) {
+//     echo "tu peux l'ecrire";
+// } else {
+//     echo "tu peux pas l'ecrire";
+// }
